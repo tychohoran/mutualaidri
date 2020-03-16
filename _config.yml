@@ -1,0 +1,25 @@
+---
+title: Rhode Island COVID-19 Community Resources
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+description: Resourses and supports for folks grappling with the COVID19 crisis in
+  Rhode Island. Organized by the AMOR Network.
+Background Color: "#f03813"
+Menu Image: 
+Site Logo: "/uploads/AMOR-LOGO.png"
+Favicon Image: 
+baseurl: 
+url: http://mutualaidri.com
+markdown: kramdown
