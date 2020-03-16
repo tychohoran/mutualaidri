@@ -1,0 +1,170 @@
+/**
+ * Reset some basic elements
+ */
+a, abbr, acronym, address, applet, article, aside, audio,
+b, big, blockquote, body, canvas, caption, center, cite, code,
+dd, del, details, dfn, div, dl, dt, em, embed,
+fieldset, figcaption, figure, footer, form,
+h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins,
+kbd, label, legend, li, mark, menu, nav, object, ol, output,
+p, pre, q, ruby, s, samp, section, small, span, strike,
+strong, sub, summary, sup, table, tbody, td, tfoot, th,
+thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block; }
+
+/**
+ * Basic styling
+ */
+body, html {
+  font: 400 18px/1.5 "Lato", sans-serif;
+  color: #fff;
+  -webkit-text-size-adjust: 100%;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/**
+ * Box Sizing
+ */
+a, article, body, code, dd, div, dl, dt,
+fieldset, footer, form, h1, h2, h3, h4, h5, h6, header, html,
+input[type=email], input[type=number],
+input[type=password], input[type=tel], input[type=text],
+input[type=url], legend, li, main, ol, p, pre,
+section, table, td, textarea, th, tr, ul {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block; }
+
+/**
+ * Lists
+ */
+ol, ul {
+  list-style: none; }
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+/**
+ * Bold and Italic Styles
+ */
+em, i {
+  font-style: italic; }
+
+b {
+  font-weight: 700; }
+
+object {
+  pointer-events: none; }
+
+/**
+ * Links
+ */
+a, a:link, a:visited {
+  color: #F15060;
+  text-decoration: none; }
+
+/**
+ * Tables
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * Blockquotes
+ */
+blockquote, q {
+  quotes: none; }
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none; }
+
+/**
+ * input
+ */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+body {
+  background-color: #f03813; }
+
+.site-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; }
+
+.site-header {
+  width: 100%;
+  height: 100%; }
+
+.site-header {
+  position: fixed;
+  pointer-events: none;
+  padding: 54px; }
+  @media screen and (max-width: 800px) {
+    .site-header {
+      padding: 27px; } }
+  .site-header .site-title {
+    line-height: 1;
+    font-weight: 900;
+    font-size: 72px;
+    float: left;
+    width: calc(100% - 270px);
+    max-width: 600px;
+    letter-spacing: -0.5px; }
+    @media screen and (max-width: 800px) {
+      .site-header .site-title {
+        font-size: 27px;
+        width: calc(100% - 120px); } }
+  .site-header .site-logo {
+    float: right;
+    width: 300px;
+    height: auto; }
+    @media screen and (max-width: 800px) {
+      .site-header .site-logo {
+        width: 120px; } }

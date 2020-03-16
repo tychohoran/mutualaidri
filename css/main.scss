@@ -1,0 +1,32 @@
+---
+---
+
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Lato', sans-serif;
+$base-font-size:   18px;
+$base-font-weight: 400;
+$base-line-height: 1.5;
+
+$spacing-unit:     27px;
+
+$text-color:       #fff;
+$background-color: {{site['Background Color']}};
+$accent-color:     #F15060;
+
+// Width of the content area
+$content-width:    600px;
+
+$on-palm:          800px;
+$on-laptop:        800px;
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+		"mixins",
+        "base",
+        "layout"
+;

@@ -1,0 +1,53 @@
+body {
+    background-color: $background-color;
+}
+
+%absolute-reset {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+%full-screen {
+    width: 100%;
+    height: 100%;
+    test
+}
+
+// Header
+
+.site-header {
+    @extend %absolute-reset;
+    @extend %full-screen;
+    position:fixed;
+    pointer-events: none;
+    padding: 2*$spacing-unit;
+
+    @include media-query($on-palm){
+        padding: $spacing-unit;
+    }
+
+    .site-title {   
+        line-height: 1;
+        font-weight: 900;
+        font-size: 72px;
+        float:left;
+        width: calc(100% - 270px);
+        max-width: 600px;
+        letter-spacing: -0.5px;
+        @include media-query($on-palm){
+            font-size: 27px;
+            width: calc(100% - 120px);
+        }
+    }
+    .site-logo{
+        float: right;
+        width: 300px;
+        height: auto;
+
+        @include media-query($on-palm){
+            width: 120px;
+        }
+    }
+}
