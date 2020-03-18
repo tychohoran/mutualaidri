@@ -29,12 +29,13 @@ body {
 
     .site-title {   
         line-height: 1;
-        font-weight: 900;
+        font-weight: 800;
         font-size: 72px;
         float:left;
         width: calc(100% - 270px);
         max-width: 600px;
-        letter-spacing: -0.5px;
+        font-kerning: normal;
+        letter-spacing: -0.02em;
         @include media-query($on-palm){
             font-size: 27px;
             width: calc(100% - 120px);
