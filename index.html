@@ -12,7 +12,7 @@ layout: default
 	    		</a>
 	  		</header>
 	  		<div class="page-body">
-	  			{{page.content}}
+	  			{{page.content | markdownify | replace: "<p", "<p><img class='pdf-icon' src='/uploads/PDF_file_icon.svg'"}}
 	  		</div>
 		</section>
 	{% endif %}

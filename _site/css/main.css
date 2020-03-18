@@ -131,6 +131,9 @@ input {
 body {
   background-color: #e43a24; }
 
+a:hover {
+  color: #78ffcb; }
+
 .site-header {
   position: relative;
   width: 100%;
@@ -164,6 +167,10 @@ body {
       .site-header .site-logo {
         width: 120px; } }
 
+.pdf-icon {
+  width: 1em;
+  margin-right: 0.5em; }
+
 .page-content {
   clear: both;
   position: relative;
@@ -172,3 +179,7 @@ body {
   @media screen and (max-width: 800px) {
     .page-content {
       padding: 27px; } }
+  .page-content .page-header h1 {
+    font-size: 54px;
+    font-weight: 800;
+    color: #fff; }
