@@ -17,9 +17,9 @@ body {
 // Header
 
 .site-header {
-    @extend %absolute-reset;
-    @extend %full-screen;
-    position:fixed;
+    position:relative;
+    width: 100%;
+    @include value-prefix(height, fit-content, webkit moz ms);
     pointer-events: none;
     padding: 2*$spacing-unit;
 
@@ -49,5 +49,15 @@ body {
         @include media-query($on-palm){
             width: 120px;
         }
+    }
+}
+.page-content {
+    clear: both;
+    position:relative;
+    width: 100%;
+    padding: 2*$spacing-unit;
+
+    @include media-query($on-palm){
+        padding: $spacing-unit;
     }
 }

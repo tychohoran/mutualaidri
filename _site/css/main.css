@@ -25,7 +25,7 @@ header, hgroup, menu, nav, section {
  * Basic styling
  */
 body, html {
-  font: 400 18px/1.5 "Lato", sans-serif;
+  font: 400 36px/1.5 "Lato", sans-serif;
   color: #fff;
   -webkit-text-size-adjust: 100%;
   font-variant: normal;
@@ -100,7 +100,7 @@ object {
  * Links
  */
 a, a:link, a:visited {
-  color: #F15060;
+  color: #f4e456;
   text-decoration: none; }
 
 /**
@@ -132,18 +132,12 @@ body {
   background-color: #e43a24; }
 
 .site-header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0; }
-
-.site-header {
+  position: relative;
   width: 100%;
-  height: 100%; }
-
-.site-header {
-  position: fixed;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: -ms-fit-content;
+  height: fit-content;
   pointer-events: none;
   padding: 54px; }
   @media screen and (max-width: 800px) {
@@ -169,3 +163,12 @@ body {
     @media screen and (max-width: 800px) {
       .site-header .site-logo {
         width: 120px; } }
+
+.page-content {
+  clear: both;
+  position: relative;
+  width: 100%;
+  padding: 54px; }
+  @media screen and (max-width: 800px) {
+    .page-content {
+      padding: 27px; } }

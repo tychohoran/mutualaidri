@@ -2,5 +2,18 @@
 layout: default
 ---
 
-<section class="splash-page"></section>
-
+{% assign sorted_pages = site.pages | sort:"position" %}
+{% for page in sorted_pages %}
+	{% if page.title%}
+		<section id="{{page.title | slugify}}" class="page">
+			<header class="page-header">
+				<a href="{{page.url}}" class="page-link">
+	    			<h1 class="page-title">{{ page.title }}</h1>
+	    		</a>
+	  		</header>
+	  		<div class="page-body">
+	  			{{page.content}}
+	  		</div>
+		</section>
+	{% endif %}
+{% endfor %}
