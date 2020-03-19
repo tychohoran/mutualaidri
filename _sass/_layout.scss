@@ -17,14 +17,19 @@ a:hover {
     width: 100%;
     height: 100%;
 }
+%flex-setup{
+    @include value-prefix(display, flex, webkit moz ms o);
+    @include prefix(flex-flow, row nowrap, webkit moz ms o);
+    @include prefix(justify-content, space-between, webkit moz ms o);
+    @include prefix(align-items, flex-start, webkit moz ms o);
+}
 
 // Header
 
 .site-header {
+    @extend %flex-setup;
     position:relative;
     width: 100%;
-    @include value-prefix(height, fit-content, webkit moz ms);
-    pointer-events: none;
     padding: 2*$spacing-unit;
 
     @include media-query($on-palm){
@@ -36,44 +41,116 @@ a:hover {
         font-weight: 800;
         font-size: 72px;
         float:left;
-        width: calc(100% - 270px);
+        width: calc(100% - 300px);
         max-width: 600px;
         font-kerning: normal;
         letter-spacing: -0.02em;
-        @include media-query($on-palm){
-            font-size: 27px;
-            width: calc(100% - 120px);
-        }
     }
     .site-logo{
         float: right;
         width: 300px;
         height: auto;
-
-        @include media-query($on-palm){
+    }
+    @include media-query($on-laptop){
+        .site-title{
+            font-size: 54px;
+            width: calc(100% - 225px);
+        }
+        .site-logo{
+            width: 225px;
+        }
+    }
+    @include media-query($on-palm){
+        .site-title{
+            font-size: 27px;
+            width: calc(100% - 140px);
+        }
+        .site-logo{
             width: 120px;
         }
     }
+
 }
 
-.pdf-icon {
-    width: 1em;
-    margin-right: 0.5em;
-}
+// Pages
 .page-content {
     clear: both;
     position:relative;
     width: 100%;
-    padding: 2*$spacing-unit;
+    padding: 0 2*$spacing-unit 2*$spacing-unit 2*$spacing-unit;
 
     @include media-query($on-palm){
-        padding: $spacing-unit;
+        padding: 0 $spacing-unit $spacing-unit $spacing-unit;
     }
-    .page-header {
-        h1 {
-            font-size: 54px;
-            font-weight: 800;
-            color: #fff;
+    .page{
+        padding: $spacing-unit;
+        border: solid 3px $text-color;
+        border-radius: $spacing-unit;
+
+        @include media-query($on-palm){
+            border: solid 2px $text-color;
+            padding: $spacing-unit*.75;
+            border-radius: $spacing-unit*.75;
+        }
+
+        .page-header {
+            .page-link{
+                @extend %flex-setup;
+            }
+            .page-title {
+                font-size: 54px;
+                font-weight: 800;
+                color: #fff;
+                line-height: 1;
+            }
+            .caret{
+                margin-top: 0.25em;
+                width: 2*$spacing-unit;
+                @include prefix(transform-origin, center center, webkit moz ms o);
+                @include prefix(transition, 0.25s, webkit moz ms o);
+            }
+             @include media-query($on-laptop){
+                .page-title {
+                    font-size: $base-font-size;
+                }
+                .caret{
+                    margin-top: 0.25em;
+                    width: $spacing-unit*1.5;
+                }
+             }
+             @include media-query($on-palm){
+                .page-title {
+                    font-size: $base-font-size*0.75;
+                }
+                .caret{
+                    margin-top: 0.125em;
+                    width: $spacing-unit;
+                }
+             }
+        }
+
+        .page-body {
+            overflow: hidden;
+            margin-top: 0;
+            max-height: 0;
+            @include prefix(transition, 0.25s, webkit moz ms o);
+            @include media-query($on-palm){
+                font-size: $base-font-size*.75;
+            }
+        }
+        .pdf-icon {
+            vertical-align: text-top;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+
+        &.selected {
+            .page-body {
+                margin-top: $spacing-unit;
+            }
+            .caret{
+                @include prefix(transform, rotate3d(1, 0, 0, 180deg), webkit moz ms o);
+            }
         }
     }
 }

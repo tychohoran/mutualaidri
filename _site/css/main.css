@@ -100,7 +100,7 @@ object {
  * Links
  */
 a, a:link, a:visited {
-  color: #f4e456;
+  color: #fbff00;
   text-decoration: none; }
 
 /**
@@ -134,16 +134,33 @@ body {
 a:hover {
   color: #78ffcb; }
 
+.site-header, .page-content .page .page-header .page-link {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  -o-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start; }
+
 .site-header {
   position: relative;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: -ms-fit-content;
-  height: fit-content;
-  pointer-events: none;
   padding: 54px; }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 600px) {
     .site-header {
       padding: 27px; } }
   .site-header .site-title {
@@ -151,35 +168,95 @@ a:hover {
     font-weight: 800;
     font-size: 72px;
     float: left;
-    width: calc(100% - 270px);
+    width: calc(100% - 300px);
     max-width: 600px;
     font-kerning: normal;
     letter-spacing: -0.02em; }
-    @media screen and (max-width: 800px) {
-      .site-header .site-title {
-        font-size: 27px;
-        width: calc(100% - 120px); } }
   .site-header .site-logo {
     float: right;
     width: 300px;
     height: auto; }
-    @media screen and (max-width: 800px) {
-      .site-header .site-logo {
-        width: 120px; } }
-
-.pdf-icon {
-  width: 1em;
-  margin-right: 0.5em; }
+  @media screen and (max-width: 850px) {
+    .site-header .site-title {
+      font-size: 54px;
+      width: calc(100% - 225px); }
+    .site-header .site-logo {
+      width: 225px; } }
+  @media screen and (max-width: 600px) {
+    .site-header .site-title {
+      font-size: 27px;
+      width: calc(100% - 140px); }
+    .site-header .site-logo {
+      width: 120px; } }
 
 .page-content {
   clear: both;
   position: relative;
   width: 100%;
-  padding: 54px; }
-  @media screen and (max-width: 800px) {
+  padding: 0 54px 54px 54px; }
+  @media screen and (max-width: 600px) {
     .page-content {
-      padding: 27px; } }
-  .page-content .page-header h1 {
-    font-size: 54px;
-    font-weight: 800;
-    color: #fff; }
+      padding: 0 27px 27px 27px; } }
+  .page-content .page {
+    padding: 27px;
+    border: solid 3px #fff;
+    border-radius: 27px; }
+    @media screen and (max-width: 600px) {
+      .page-content .page {
+        border: solid 2px #fff;
+        padding: 20.25px;
+        border-radius: 20.25px; } }
+    .page-content .page .page-header .page-title {
+      font-size: 54px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1; }
+    .page-content .page .page-header .caret {
+      margin-top: 0.25em;
+      width: 54px;
+      -webkit-transform-origin: center center;
+      -moz-transform-origin: center center;
+      -ms-transform-origin: center center;
+      -o-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transition: 0.25s;
+      -moz-transition: 0.25s;
+      -ms-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s; }
+    @media screen and (max-width: 850px) {
+      .page-content .page .page-header .page-title {
+        font-size: 36px; }
+      .page-content .page .page-header .caret {
+        margin-top: 0.25em;
+        width: 40.5px; } }
+    @media screen and (max-width: 600px) {
+      .page-content .page .page-header .page-title {
+        font-size: 27px; }
+      .page-content .page .page-header .caret {
+        margin-top: 0.125em;
+        width: 27px; } }
+    .page-content .page .page-body {
+      overflow: hidden;
+      margin-top: 0;
+      max-height: 0;
+      -webkit-transition: 0.25s;
+      -moz-transition: 0.25s;
+      -ms-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s; }
+      @media screen and (max-width: 600px) {
+        .page-content .page .page-body {
+          font-size: 27px; } }
+    .page-content .page .pdf-icon {
+      vertical-align: text-top;
+      width: 1em;
+      margin-right: 0.5em; }
+    .page-content .page.selected .page-body {
+      margin-top: 27px; }
+    .page-content .page.selected .caret {
+      -webkit-transform: rotate3d(1, 0, 0, 180deg);
+      -moz-transform: rotate3d(1, 0, 0, 180deg);
+      -ms-transform: rotate3d(1, 0, 0, 180deg);
+      -o-transform: rotate3d(1, 0, 0, 180deg);
+      transform: rotate3d(1, 0, 0, 180deg); }

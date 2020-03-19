@@ -19,8 +19,8 @@ description: Resourses and supports for folks grappling with the COVID19 crisis 
 Background Color: "#e43a24"
 Accent Color: "#fbff00"
 Menu Image: 
-Site Logo: "/uploads/AMOR-LOGO.png"
-Favicon Image: 
+Site Logo: "/uploads/AMOR-LOGO_2.png"
+Favicon Image: "/uploads/AMOR-favicon.png"
 baseurl: 
 url: http://mutualaidri.com
 markdown: kramdown
