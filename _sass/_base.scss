@@ -28,6 +28,8 @@ header,hgroup,menu,nav,section{
  */
 body, html {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans SC', sans-serif;
     color: $text-color;
     -webkit-text-size-adjust: 100%;
     font-variant: normal;
