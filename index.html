@@ -4,7 +4,7 @@ layout: default
 
 {% assign sorted_pages = site.pages | sort:"position" %}
 {% for page in sorted_pages %}
-	{% if page.title%}
+	{% if page.title == "Flyers" %}
 		<section id="{{page.title | slugify}}" class="page">
 			<header class="page-header">
 				<a href="#" class="page-link">
